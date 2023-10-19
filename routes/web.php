@@ -29,3 +29,7 @@ Route::get('/settings', function () {
 Route::get('/users', function () {
     return inertia('Users');
 });
+
+Route::post('/logout', function () {
+    return dd('Logout');
+});
