@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return inertia('Welcome', [
+        'name' => 'Roei Boribor',
+        'frameworks' => [
+            'Laravel', 'Vue', 'Inertia'
+        ]
+    ]);
+});
+
+Route::get('/settings', function () {
+    return inertia('Settings');
+});
+
+Route::get('/users', function () {
+    return inertia('Users');
 });
